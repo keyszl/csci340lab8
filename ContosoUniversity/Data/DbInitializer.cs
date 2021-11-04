@@ -1,9 +1,9 @@
-﻿using ContosoUniversity.Models;
+﻿using TriadCollege.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContosoUniversity.Data
+namespace TriadCollege.Data
 {
     public static class DbInitializer
     {

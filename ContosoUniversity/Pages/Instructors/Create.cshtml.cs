@@ -1,5 +1,5 @@
-﻿using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+﻿using TriadCollege.Data;
+using TriadCollege.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -7,11 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace TriadCollege.Pages.Instructors
 {
     public class CreateModel : InstructorCoursesPageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly TriadCollege.Data.SchoolContext _context;
         private readonly ILogger<InstructorCoursesPageModel> _logger;
 
         public CreateModel(SchoolContext context,

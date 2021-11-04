@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using TriadCollege.Data;
+using TriadCollege.Models;
 
-namespace ContosoUniversity.Pages.Students
+namespace TriadCollege.Pages.Students
 {
     public class CreateModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly TriadCollege.Data.SchoolContext _context;
 
-        public CreateModel(ContosoUniversity.Data.SchoolContext context)
+        public CreateModel(TriadCollege.Data.SchoolContext context)
         {
             _context = context;
         }
@@ -35,7 +35,7 @@ namespace ContosoUniversity.Pages.Students
             if (await TryUpdateModelAsync<Student>(
                 emptyStudent,
                 "student",   // Prefix for form value.
-                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate, s => s.Age))
             {
                 _context.Students.Add(emptyStudent);
                 await _context.SaveChangesAsync();

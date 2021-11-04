@@ -1,5 +1,5 @@
 ﻿@page
-@model ContosoUniversity.Pages.Students.DetailsModel
+@model TriadCollege.Pages.Students.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -30,8 +30,16 @@
             @Html.DisplayFor(model => model.Student.EnrollmentDate)
         </dd>
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Age)
+        </dd>
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Student.Enrollments)
         </dt>
+
         <dd class="col-sm-10">
             <table class="table">
                 <tr>

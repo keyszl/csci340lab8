@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using TriadCollege.Data;
+using TriadCollege.Models;
 
-namespace ContosoUniversity.Pages.Students
+namespace TriadCollege.Pages.Students
 {
     public class EditModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly TriadCollege.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(TriadCollege.Data.SchoolContext context)
         {
             _context = context;
         }
@@ -51,7 +51,7 @@ namespace ContosoUniversity.Pages.Students
             if (await TryUpdateModelAsync<Student>(
                 studentToUpdate,
                 "student",
-                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate, s => s.Age))
             {
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");

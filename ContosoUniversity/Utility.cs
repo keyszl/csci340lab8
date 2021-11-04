@@ -1,4 +1,4 @@
-﻿namespace ContosoUniversity
+﻿namespace TriadCollege
 {
     public static class Utility
     {

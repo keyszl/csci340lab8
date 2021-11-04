@@ -1,15 +1,15 @@
-﻿using ContosoUniversity.Models;
+﻿using TriadCollege.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Courses
+namespace TriadCollege.Pages.Courses
 {
     public class EditModel : DepartmentNamePageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly TriadCollege.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(TriadCollege.Data.SchoolContext context)
         {
             _context = context;
         }

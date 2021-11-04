@@ -7184,9 +7184,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\csci340lab8\\ContosoUniversity\\ContosoUniversity.csproj",
-      "projectName": "ContosoUniversity",
-      "projectPath": "C:\\Users\\User\\source\\repos\\csci340lab8\\ContosoUniversity\\ContosoUniversity.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\csci340lab8\\ContosoUniversity\\TriadCollege.csproj",
+      "projectName": "TriadCollege",
+      "projectPath": "C:\\Users\\User\\source\\repos\\csci340lab8\\ContosoUniversity\\TriadCollege.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\source\\repos\\csci340lab8\\ContosoUniversity\\obj\\",
       "projectStyle": "PackageReference",

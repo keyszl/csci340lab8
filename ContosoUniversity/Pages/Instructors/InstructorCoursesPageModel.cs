@@ -1,11 +1,11 @@
-﻿using ContosoUniversity.Data;
-using ContosoUniversity.Models;
-using ContosoUniversity.Models.SchoolViewModels;
+﻿using TriadCollege.Data;
+using TriadCollege.Models;
+using TriadCollege.Models.SchoolViewModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace TriadCollege.Pages.Instructors
 {
     public class InstructorCoursesPageModel : PageModel
     {

@@ -1,7 +1,7 @@
-﻿using ContosoUniversity.Models;
+﻿using TriadCollege.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ContosoUniversity.Data
+namespace TriadCollege.Data
 {
     public class SchoolContext : DbContext
     {

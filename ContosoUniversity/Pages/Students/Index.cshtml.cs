@@ -1,5 +1,5 @@
-﻿using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+﻿using TriadCollege.Data;
+using TriadCollege.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +7,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Students
+namespace TriadCollege.Pages.Students
 {
     public class IndexModel : PageModel
     {
@@ -22,6 +22,8 @@ namespace ContosoUniversity.Pages.Students
 
         public string NameSort { get; set; }
         public string DateSort { get; set; }
+
+        public string AgeSort { get; set; }
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
@@ -33,6 +35,7 @@ namespace ContosoUniversity.Pages.Students
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+            AgeSort = sortOrder == "Age" ? "age_desc" : "Age";
             if (searchString != null)
             {
                 pageIndex = 1;
@@ -61,6 +64,9 @@ namespace ContosoUniversity.Pages.Students
                     break;
                 case "date_desc":
                     studentsIQ = studentsIQ.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                case "age_desc":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.Age);
                     break;
                 default:
                     studentsIQ = studentsIQ.OrderBy(s => s.LastName);
